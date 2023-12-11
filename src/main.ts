@@ -14,6 +14,7 @@ const start = async () => {
             credentials: true,
             methods: ['OPTIONS', 'GET', 'POST', 'DELETE', 'PUT'],
             allowedHeaders: ['Content-Type', 'Depth', 'User-Agent', 'X-File-Size', 'X-Requested-With', 'If-Modified-Since', 'X-File-Name', 'Cache-Control'],
+            preflightContinue: true
         });
 
         await app.listen(PORT, () => {
