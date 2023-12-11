@@ -1,7 +1,7 @@
 import * as process from 'process';
-import { NestFactory } from '@nestjs/core';
-import { AppModule } from './app.module';
-import { config } from 'dotenv';
+import {NestFactory} from '@nestjs/core';
+import {AppModule} from './app.module';
+import {config} from 'dotenv';
 
 const start = async () => {
     try {
@@ -11,10 +11,9 @@ const start = async () => {
 
         app.enableCors({
             origin: "*",
-            methods: ['GET', 'PUT', 'POST', 'DELETE'],
-            allowedHeaders: ['Content-Type', 'Authorization'],
-            preflightContinue: false,
-            optionsSuccessStatus: 204,
+            credentials: true,
+            methods: ['OPTIONS', 'GET', 'POST', 'DELETE', 'PUT'],
+            allowedHeaders: ['Content-Type', 'Depth', 'User-Agent', 'X-File-Size', 'X-Requested-With', 'If-Modified-Since', 'X-File-Name', 'Cache-Control'],
         });
 
         await app.listen(PORT, () => {
