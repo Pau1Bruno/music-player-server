@@ -1,27 +1,29 @@
+# Server part of Music Player
+## Stack: TS, NestJS, MongoDB
 
-## Installation
+> ## About Project:
+> - Play, download, delete tracks.
+> - A page for each track with comments.
+> - Custom API for working with tracks, users, comments.
+> - Custom authorization with password encryption on the server.
+> - Implementation of changing themes using @mixin and context.
 
+> ### Server has:
+> - Auth logic
+> - Download and delete tracks (on server) 
+> - Custom API for users, tracks and comments 
+
+## I am using MongoDB for this project
+
+---
+
+
+### To run server in watch mode:
 ```bash
-$ npm install
+npm run start:dev
 ```
 
-## Running the app (server-side from server path)
-
+### To run server:
 ```bash
-# development
-$ npm run start
-
-# watch mode
-$ npm run start:dev
-
-# production mode
-$ npm run start:prod
+npm run start
 ```
-
-## About 
-
- This is a **music player** \
-You can:
-- Listen music
-- Upload your own tracks
-- Make your own custom albums
